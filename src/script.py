@@ -5,7 +5,7 @@ import telegram_url
 
 TELEGRAM_URL = telegram_url.api_uri
 
-URL = 'https://compragamer.com/index.php?criterio=3070&x=0&y=0&seccion=3&nro_max=50'
+URL = 'https://compragamer.com/index.php?criterio=580&x=0&y=0&seccion=3&nro_max=50'
 
 has_product_flag = True
 
