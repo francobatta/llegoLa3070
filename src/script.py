@@ -28,11 +28,13 @@ async def check(url,value):
     if "1 - 0" not in has_products_string:
         # queremos una sola notif de si llego el producto
         if has_product_flag and not has_stock:
-            requests.get(TELEGRAM_URL + 'Atento maestro, parece que la '+value+' ha arribado')
+            future = loop.run_in_executor(None, requests.get, TELEGRAM_URL + 'Atento maestro, parece que la '+value+' ha arribado')
+            await future
             print('Hay productos de la'+ value +' pero no hay stock')
             has_product_flag = False
         elif has_stock:
-            requests.get(TELEGRAM_URL + 'LLEGO LA '+value+' PAPA HORA DE COMPRAR')
+            future = loop.run_in_executor(None, requests.get,TELEGRAM_URL + 'LLEGO LA '+value+' PAPA HORA DE COMPRAR')
+            await future
             print('LLEGO LA '+value+' SUPREMA')
 
 
