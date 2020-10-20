@@ -25,4 +25,4 @@ while True:
         elif has_stock:
             requests.get(TELEGRAM_URL + 'LLEGO LA 3070 PAPA HORA DE COMPRAR')
             print("LLEGO LA 3070 SUPREMA")
-    time.sleep(3)
+    time.sleep(120)
